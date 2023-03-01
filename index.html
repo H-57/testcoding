@@ -96,9 +96,9 @@ let sidebarapiData;
 
 
 const card=async()=>{
- const sapi=await fetch("../api/homeapi/series.json");
- const mapi=await fetch("../api/homeapi/movie.json");
- const sideapi=await fetch("../api/homeapi/slidebar.json"); //feth data from api
+ const sapi=await fetch("series.json");
+ const mapi=await fetch("movie.json");
+ const sideapi=await fetch("slidebar.json"); //feth data from api
 
  
     seriesapiData=await sapi.json()//store data into a variable
