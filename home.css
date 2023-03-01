@@ -283,7 +283,7 @@ height: 13rem;
 }
 .play{
 display: block;
-left: 40%;
+left: 31%;
 }
 header{
 font-size: 1rem;
@@ -291,6 +291,9 @@ font-size: 1rem;
 nav ul li{
 font-size: 1rem;
 }
+    #seriesdiv{
+        margin-top:4rem
+    }
 }
 
 
