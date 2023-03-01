@@ -98,20 +98,20 @@ const fetchdata=async()=>{
 try {
   
 
- const sapi= fetch("../api/homeapi/series.json"); //feth data from api
+ const sapi=await fetch("../api/homeapi/series.json"); //feth data from api
 
-  sapi.then((response) => response.json())
-  .then((data) =>  seriesapiData=data);//store data into a variable
-
-  const mapi= fetch("../api/homeapi/movie.json");
  
-   mapi.then((response) => response.json())
-   .then((data) =>  movieapiData=data);
-  
-   const sideapi= fetch("../api/homeapi/slidebar.json");
+  seriesapiData=await sapi.json()//store data into a variable
 
-sideapi.then((response) => response.json())
-.then((data) =>  sidebarapiData=data);
+  const mapi= await  fetch("../api/homeapi/movie.json");
+ 
+  
+   movieapiData= await mapi.json();
+  
+   const sideapi=await fetch("../api/homeapi/slidebar.json");
+
+
+  sidebarapiData=await sideapi.json()
 
 const movie=document.getElementById('movie');     //get element and store into a var
 const series=document.getElementById('Series');
@@ -151,7 +151,9 @@ cardcreate(sidebarapiData,sidebar);
 } catch (error) {
   
 }
+
 }
+fetchdata();
 </script>
 <style>
   .material-symbols-outlined play {
