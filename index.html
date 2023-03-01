@@ -94,9 +94,7 @@ let seriesapiData; //store data of fetch api in json
 let movieapiData;
 let sidebarapiData;
 
-const fetchdata=async()=>{
-try {
-  
+
 
  const sapi= fetch("../api/homeapi/series.json"); //feth data from api
 
@@ -148,10 +146,7 @@ cardcreate(movieapiData,series);
 cardcreate(sidebarapiData,sidebar);
 
 
-} catch (error) {
-  
-}
-}
+
 </script>
 <style>
   .material-symbols-outlined play {
