@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="hide.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Anime</li>
+      <li>Sitemap</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <img src="navbar.gif" alt="" />
+  </nav>
+
+  <div class="banner">
+    <div class="feature">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
+        alt="" />
+      <h2>hello this is title</h2>
+    </div>
+    <div class="slide">
+      <div class="sl1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
+          alt="" />
+        <h2>hello this is title</h2>
+      </div>
+      <div class="sl">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
+          alt="" />
+        <h2>hello this is title</h2>
+      </div>
+      <div class="sl">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
+          alt="" />
+        <h2>hello this is title</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div id="seriesdiv">
+      <span class="heading largetext"> Latest Series</span>
+      <ul class="video" id="Series">
+
+      </ul>
+    
+     
+    </div>
+
+    <div id="moviediv"><span class="heading largetext"> Latest Movies</span>
+
+
+      <ul class="video" id="movie">
+
+      </ul>
+    </div>
+    <img src="body.gif" class="bgimg" alt="" />
+  </div>
+
+  <aside>
+   <span class="heading sml">  Ongoing Series</span>
+    <ul class="video" id="sidebar">
+
+    </ul>
+  </aside>
+
+
+  <footer>
+    <div class="footer">
+      <li><a target="_blank" href="" class="fa fa-facebook fab"></a></li>
+      <li><a target="_blank" href="" class="fa fa-instagram fab"></a></li>
+      <li><a target="_blank" href="" class="fa fa-telegram fab"></a></li>
+
+      <div class="fcopy">
+        Copyright © A2zanime. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+<script>
+
+let seriesapiData; //store data of fetch api in json
+let movieapiData;
+let sidebarapiData;
+
+const fetchdata=async()=>{
+try {
+  
+
+ const sapi= fetch("../api/homeapi/series.json"); //feth data from api
+
+  sapi.then((response) => response.json())
+  .then((data) =>  seriesapiData=data);//store data into a variable
+
+  const mapi= fetch("../api/homeapi/movie.json");
+ 
+   mapi.then((response) => response.json())
+   .then((data) =>  movieapiData=data);
+  
+   const sideapi= fetch("../api/homeapi/slidebar.json");
+
+sideapi.then((response) => response.json())
+.then((data) =>  sidebarapiData=data);
+
+const movie=document.getElementById('movie');     //get element and store into a var
+const series=document.getElementById('Series');
+const sidebar=document.getElementById('sidebar');
+
+const cardcreate=(data,element)=>{           //function for create a video cards
+
+  for(let i=0;i<9;i++){                   //display only 9 cards 
+var randNo=Math.floor(Math.random() *data.length)
+// console.log(randNo)
+  let create = document.createElement("li");
+
+create.innerHTML = `
+         
+
+        <li class="card">
+          <a href="${data[randNo].url}">
+          <figure><img src="${data[randNo].image}" alt="" class="thumbnail" />
+            <span class="material-symbols-outlined play">
+              play_circle
+              </span>
+            </figure>
+          </a>
+   <h2> <header>${data[randNo].title}</header></h2>
+  </li>
+     `;
+element.appendChild(create)
+
+  }
+}
+ //function calling
+cardcreate(seriesapiData,movie);
+cardcreate(movieapiData,series);
+cardcreate(sidebarapiData,sidebar);
+
+
+} catch (error) {
+  
+}
+}
+</script>
+<style>
+  .material-symbols-outlined play {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+  
+}
+</style>
+</body>
+
+</html>
