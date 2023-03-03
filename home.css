@@ -1,294 +1,313 @@
 
 *{
-margin: 0%;
-padding: 0%;
-list-style-type: none;
-color: aliceblue;
-}
-body{
-background: #120922;
-list-style-type: none;
-}
-
-nav{
-display: flex;
-
-
-flex-wrap: wrap;
-}
-nav ul{
-display: flex;
-flex-direction: row;
-margin: 2rem;
-flex-wrap: wrap;
-}
-nav ul li,.heading{
-margin-right :2rem;
-font-size :1.3rem;
-text-shadow: 0 0 3px #00ABFF, 0 0 5px #00CFFF;
-cursor: pointer;
-}
-nav img{
-position: absolute;
-opacity: 0.7;
-z-index: -55;
-
-/* display: block; */
-width: 100%;
-height: 5rem;
-}
-.bgimg{
-position: fixed;
-z-index: -55;
-width: 100%;
-opacity: 0.3;
-top: 0;
-left: 0;
-}
-footer{
-background: #0d0932e3; 
-}
-
-.footer{
-
-/* background: red; */
-margin-top: 2rem;
-display: flex;
-
-}
-.footer li{
-font-size:30px;
-list-style: none;
-margin:1rem
-}
-.footer li a:hover{
-color:#6200ff;
-transition:all 1s
-}
-
-.banner{
-display: flex;
-height: 25rem;
-width: 100%;
-}
-.feature{
-width: 50%;
-
-}
-.feature img{
-width: 100%;
-height: 100%;
-}
-
-.slide
-{
-display: flex;
-flex-wrap: wrap;
-overflow-y: hidden;
-}
-.sl1{
-width: 100%;
-height: 50%;
-overflow: hidden;
-}
-.banner img{
-width: 100%;
-height: 100%;
-}
-.sl{
-width: 50%;
-
-}
-.banner h2{
-color: #120922;
-position: relative;
-bottom: 3rem;
-}
-/* aside code for set at left  */
-aside{
-position: absolute;
-top: 32rem;
-right: 0;
-width: 30%;
-height: 200%;
-overflow-y: scroll;
-scrollbar-width: none;
-top: 31rem;
-box-sizing: border-box;
-}
-
-.body{
-width: 70%;
-}
-.fcopy{
-text-align: center;
-}
-aside .video{
-
-justify-content: flex-start;
-column-gap: 3%;
-}
-/* set aside inner cards size */
-#sidebar li{
-width: 30%;
-
-/* margin-left: 3%; */
-}
-aside .play{
-left: 22%;
-}
-#sidebar .card{
-width: 100%;
-height: 8rem;
-
-}
-aside header{
-font-size: small;
-}
-
-.largetext {
-margin: 3rem;
-font-size: 3rem;
-}
-
-.sml{
-font-size: 2rem;
-}
-
-
-
-
-
-
-
-/* for ul list store all video cards */
-.video{
-
-display: flex;
-flex-wrap: wrap;
-/* margin: auto; */
-justify-content: space-around;
-row-gap: 20px;
-column-gap: 40px;
-}
-/* for define size of video cards */
-.card{
-width: 10rem;
-height: 12rem;
-color: aliceblue;
-/* border: solid 1px red; */
-/* margin: 5px; */
-background: #00abff87;
-border-radius: 9px;
-cursor:pointer;
-overflow: hidden;
-}
-/* for define image in card */
-.thumbnail{
-position:relative;
-width: 90%;
-
-top: 2%;
-left: 5%;
-border-radius: 10px;
-transform: scale(1);
-transition: all .4s ease-in-out;
-height: 100%;
-
-
-}
-/*  for stop over floew of image from card */
-figure{
-overflow: hidden; 
-height: 70%;
-}
-
-
-.thumbnail:hover {
-/* color: aquamarine; */
-width: 90%;
-transform: scale(1.5);
-
-}
-/* for episode number shows */
-.epnumber{
-
-font-size: 21px;
-text-shadow: 0px 2px 3px aqua;
-color: aqua;
-}
-/* for title of video shows */
-.card header{
-/* color: tomato; */
-color: white;
-text-shadow:1px 1px 3px tomato ;
-margin-left: 5px;
-}
-.play{
-display:none;
-position: relative;
-
-
-top: -58%;
-left: 32%;
-font-size: 50px!important;
-}
-
-
-li:hover .play{
-display: block;
-}
-
-@media only screen and (max-width: 400px){
-.bgimg{
-    height: 120%;
-
-}
-.banner{
+    margin: 0%;
+    padding: 0%;
+    list-style-type: none;
+    color: aliceblue;
+    }
+    body{
+    background: #120922;
+    list-style-type: none;
+    }
+    
+    nav{
+    display: flex;
+    
+    
     flex-wrap: wrap;
-}
-.feature{
+    }
+    nav ul{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    flex-wrap: wrap;
+    }
+    nav ul li,.heading{
+    margin-right :2rem;
+    font-size :1.3rem;
+    text-shadow: 0 0 3px #00ABFF, 0 0 5px #00CFFF;
+    cursor: pointer;
+    }
+    nav img{
+    position: absolute;
+    opacity: 0.7;
+    z-index: -55;
+    
+    /* display: block; */
     width: 100%;
-}
-.slide{
-    flex-direction: column;
- width: 100%;
-    overflow-x: scroll;
+    height: 5rem;
+    }
+    .bgimg{
+    position: fixed;
+    z-index: -55;
+    width: 100%;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    }
+    footer{
+    background: #0d0932e3; 
+    }
+    
+    .footer{
+    
+    /* background: red; */
+    margin-top: 2rem;
+    display: flex;
+    
+    }
+    .footer li{
+    font-size:30px;
+    list-style: none;
+    margin:1rem
+    }
+    .footer li a:hover{
+    color:#6200ff;
+    transition:all 1s
+    }
+    
+    .banner{
+    display: flex;
+    height: 25rem;
+    width: 100%;
+    }
+    .feature{
+    width: 50%;
+    
+    }
+    .feature img{
+    width: 100%;
+    height: 100%;
+    }
+    
+    .slide
+    {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    }
+    .sl1{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    }
+    .banner img{
+    width: 100%;
+    height: 100%;
+    }
+    .sl{
+    width: 50%;
+    
+    }
+    .banner h2{
+    color: #120922;
+    position: relative;
+    bottom: 3rem;
+    }
+    /* aside code for set at left  */
+    aside{
+    position: absolute;
+    top: 32rem;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    top: 31rem;
+    box-sizing: border-box;
+    }
+    
+    .body{
+    width: 70%;
+    }
+    .fcopy{
+    text-align: center;
+    }
+    aside .video{
+    
+    justify-content: flex-start;
+    column-gap: 3%;
+    }
+    /* set aside inner cards size */
+    #sidebar li{
+    width: 30%;
+    
+    /* margin-left: 3%; */
+    }
+    aside .play{
+    left: 22%;
+    }
+    #sidebar .card{
+    width: 100%;
+    height: 8rem;
+    
+    }
+    aside header{
+    font-size: small;
+    }
+    
+    .largetext {
+    margin: 3rem;
+    font-size: 3rem;
+    }
+    
+    .sml{
+    font-size: 2rem;
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* for ul list store all video cards */
+    .video{
+    
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: auto; */
+    justify-content: space-around;
+    row-gap: 20px;
+    column-gap: 40px;
+    }
+    /* for define size of video cards */
+    .card{
+    width: 10rem;
+    height: 12rem;
+    color: aliceblue;
+    /* border: solid 1px red; */
+    /* margin: 5px; */
+    background: #00abff87;
+    border-radius: 9px;
+    cursor:pointer;
+    overflow: hidden;
+    }
+    /* for define image in card */
+    .thumbnail{
+    position:relative;
+    width: 90%;
+    
+    top: 2%;
+    left: 5%;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: all .4s ease-in-out;
+    height: 100%;
+    
+    
+    }
+    /*  for stop over floew of image from card */
+    figure{
+    overflow: hidden; 
+    height: 70%;
+    }
+    
+    
+    .thumbnail:hover {
+    /* color: aquamarine; */
+    width: 90%;
+    transform: scale(1.5);
+    
+    }
+    /* for episode number shows */
+    .epnumber{
+    
+    font-size: 21px;
+    text-shadow: 0px 2px 3px aqua;
+    color: aqua;
+    }
+    /* for title of video shows */
+    .card header{
+    /* color: tomato; */
+    color: white;
+    text-shadow:1px 1px 3px tomato ;
+    margin-left: 5px;
+    }
+    .play{
+    display:none;
+    position: relative;
+    
+    
+    top: -58%;
+    left: 32%;
+    font-size: 50px!important;
+    }
+    
+    
+    li:hover .play{
+    display: block;
+    }
+
+
+   button{ color: white;
+    background: #0b97ff;
+    width: 104px;
+    height: 50px;
+  
+    margin-top: 13px;
+    border-radius: 25px;
+    font-size: large;
+  }
+   button:hover{
+    background-color: #0a6bb4;
+    font-size: larger;
+   }
+    @media only screen and (max-width: 400px){
+    .bgimg{
+        height: 120%;
+    
+    }
+    .banner{
+        flex-wrap: wrap;
+    }
+    .feature{
+        width: 100%;
+    }
+    .slide{
+        flex-direction: column;
+     width: 100%;
+        overflow-x: scroll;
+        height: 13rem;
+       
+    }
+    .sl,.sl1{
+    width: 70%;
+    height: auto;
+    margin-left: 2px;
+    float: right;
+    
+    }
+    aside{
+    position:inherit;
+    width: 100%;
+    }
+    .body{
+    width: 100%;
+    margin-top: 3rem;
+    }
+    .largetext{
+    font-size: 2.2rem;
+    }
+    .card{
+    width: 8rem;
     height: 13rem;
-   
-}
-.sl,.sl1{
-width: 70%;
-height: auto;
-margin-left: 2px;
-float: right;
-
-}
-aside{
-position:inherit;
-width: 100%;
-}
-.body{
-width: 100%;
-margin-top: 3rem;
-}
-.largetext{
-font-size: 2.2rem;
-}
-.card{
-width: 8rem;
-height: 13rem;
-}
-.play{
-display: block;
-left: 40%;
-}
-header{
-font-size: 1.5rem;
-}
-nav ul li{
-font-size: 1rem;
-}
-}
-
-
+    }
+    .play{
+    display: block;
+    left: 31%;
+    }
+    header{
+    font-size: 1rem;
+    }
+    nav ul li{
+    font-size: 1rem;
+    }
+        #seriesdiv{
+            margin-top:5rem
+        }
+        .video{
+            justify-content:normal;
+        }
+    }
+    
