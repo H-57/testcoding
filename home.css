@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     }
     nav ul li,.heading{
+        display: block;
     margin-right :2rem;
     font-size :1.3rem;
     text-shadow: 0 0 3px #00ABFF, 0 0 5px #00CFFF;
@@ -47,6 +48,7 @@
     }
     footer{
     background: #0d0932e3; 
+    clear: both;
     }
     
     .footer{
@@ -244,7 +246,7 @@
     background: #0b97ff;
     width: 104px;
     height: 50px;
-  
+  float:right;
     margin-top: 13px;
     border-radius: 25px;
     font-size: large;
@@ -252,6 +254,9 @@
    button:hover{
     background-color: #0a6bb4;
     font-size: larger;
+   }
+   a{
+    text-decoration: none;
    }
     @media only screen and (max-width: 400px){
     .bgimg{
