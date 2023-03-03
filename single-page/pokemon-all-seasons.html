@@ -6,22 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="hide.css">
+  <link rel="stylesheet" href="../hide.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li>Anime</li>
-      <li>Sitemap</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
-    <img src="navbar.gif" alt="" />
+  <nav id="nav">
   </nav>
 
   <div class="banner">
@@ -58,7 +50,7 @@
     
      
     </div>
-    <img src="body.gif" class="bgimg" alt="" />
+    <img src="../src/body.gif" class="bgimg" alt="" />
   </div>
 
   <aside>
@@ -69,16 +61,7 @@
   </aside>
 
 
-  <footer>
-    <div class="footer">
-      <li><a target="_blank" href="" class="fa fa-facebook fab"></a></li>
-      <li><a target="_blank" href="" class="fa fa-instagram fab"></a></li>
-      <li><a target="_blank" href="" class="fa fa-telegram fab"></a></li>
-
-      <div class="fcopy">
-        Copyright © A2zanime. All Rights Reserved
-      </div>
-    </div>
+  <footer id="footer">
   </footer>
 <script>
 
@@ -89,12 +72,12 @@ let seriesapi;
 
 
 
-const sapi= fetch("../api/pkallseason.json");
+const sapi= fetch("../src/api/pokemon/pkmnseries.json");
 
   sapi.then((response) => response.json())
   .then((data) =>  seriesapi=data);
 
-  const sideapi= fetch("../api/homeapi/slidebar.json");
+  const sideapi= fetch("../src/api/homeapi/slidebar.json");
 
 sideapi.then((response) => response.json())
 .then((data) =>  sidebarapi=data);
@@ -145,6 +128,9 @@ cardcreate(sidebarapi,sidebar,12);
   
 }
 </style>
+
+<script src="../script/navbar.js"></script>
+<script src="../script/footer.js"></script>
 </body>
 
 </html>

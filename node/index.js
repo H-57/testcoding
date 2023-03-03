@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+const fs=require('fs')
+let templ=` <li class="card">
+    
+<figure><img src="\${apidata[i].image}" alt="" class="thumbnail" /></figure>
+
+<span class="epnumber">\${apidata[i].epno}</span>
+<header>\${apidata[i].title}</header>
+<span class="material-symbols-outlined play">
+ play_circle
+ </span>
+</li>`
+
+
+for(let i=1;i<=23;i++){
+
+    fs.writeFileSync(`./pokemon-season${i}-all-episodes.html`,`<!DOCTYPE html>
     <html lang="en">
     
     <head>
@@ -6,16 +21,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>a2z anime</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-      
-        <link rel="stylesheet" href="../hide.css">
         <link rel="stylesheet" href="app.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
     </head>
     
     <body>
-      <nav id="nav"></nav>
+    
         <div style="height: 400px;"><iframe style="height: 400px;" allowfullscreen="" frameborder="0"  id="myFrame"
                 src="https://www.short.ink/OINV7mrQTL8"
                 
@@ -36,7 +48,7 @@
         <ul id="video" class="video"></ul>
     
     
-        <footer id="footer"></footer>
+    
     
     
     
@@ -55,7 +67,7 @@
     
     let apidata;
     const start=async()=>{
-    const api=await fetch("../src/api/pokemon/pkmns1.json");
+    const api=await fetch("../src/api/pokemon/pkmns${i}.json");
     
     apidata=await api.json();
     
@@ -82,18 +94,9 @@
         // }
         let create = document.createElement("li");
     
-        create.innerHTML = `
-           <li class="card">
-    
-<figure><img src="${apidata[i].image}" alt="" class="thumbnail" /></figure>
-
-<span class="epnumber">${apidata[i].epno}</span>
-<header>${apidata[i].title}</header>
-<span class="material-symbols-outlined play">
- play_circle
- </span>
-</li>
-          `
+        create.innerHTML = \`
+          ${templ}
+          \`
              ;
     
         let select = document.getElementById("video");
@@ -222,12 +225,15 @@
     }
      start();
     </script>
-        <script src="../script/navbar.js"></script>
-        <script src="../script/footer.js"></script>
+        
     </body>
     
     </html>
     
     
     
-    
+    `)
+
+
+
+}

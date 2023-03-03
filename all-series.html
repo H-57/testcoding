@@ -13,10 +13,7 @@
 </head>
 
 <body>
- 
-  <nav id="nav">
-   
-  </nav>
+  <nav id="nav"></nav>
 
   <div class="banner">
     <div class="feature">
@@ -45,21 +42,12 @@
 
   <div class="body">
     <div id="seriesdiv">
-      <span class="heading largetext"> Latest Series</span>
+      <span class="heading largetext"> Pokemon Series</span>
       <ul class="video" id="Series">
 
       </ul>
     
-      <a href="all-series.html"><button>All Series</button></a>
-    </div>
-
-    <div id="moviediv"><span class="heading largetext"> Latest Movies</span>
-
-
-      <ul class="video" id="movie">
-
-      </ul>
-      <a href="all-movies.html"><button>All Movies</button></a>
+     
     </div>
     <img src="./src/body.gif" class="bgimg" alt="" />
   </div>
@@ -72,69 +60,61 @@
   </aside>
 
 
-  <footer id="footer">
-    
-  </footer>
+  <footer id="footer"></footer>
 <script>
 
-let seriesapiData; //store data of fetch api in json
-let movieapiData;
-let sidebarapiData;
 
 
-const card=async()=>{
- const sapi=await fetch("../src/api/homeapi/series.json");
- const mapi=await fetch("../src/api/homeapi/movie.json");
- const sideapi=await fetch("../src/api/homeapi/slidebar.json"); //feth data from api
+let sidebarapi;
+let seriesapi;
 
- 
-    seriesapiData=await sapi.json()//store data into a variable
 
-  
- 
-    movieapiData= await mapi.json()
-  
-   ;
 
- sidebarapiData= await sideapi.json()
+const sapi= fetch("../src/api/all/series.json");
 
-const movie=document.getElementById('movie');     //get element and store into a var
+  sapi.then((response) => response.json())
+  .then((data) =>  seriesapi=data);
+
+  const sideapi= fetch("../src/api/homeapi/slidebar.json");
+
+sideapi.then((response) => response.json())
+.then((data) =>  sidebarapi=data);
+
 const series=document.getElementById('Series');
 const sidebar=document.getElementById('sidebar');
+let size;
+const cardcreate=(data,element,size)=>{
 
-const cardcreate=(data,element)=>{           //function for create a video cards
-
-  for(let i=0;i<9;i++){                   //display only 9 cards 
-var randNo=Math.floor(Math.random() *data.length)
-// console.log(randNo)
+  for(let i=0;i<size;i++){
   let create = document.createElement("li");
+  if(data[i].url=="undefined"){
+    data[i].url="";
+  }
 
 create.innerHTML = `
          
 
         <li class="card">
-          <a href="${data[randNo].url}">
-          <figure><img src="${data[randNo].image}" alt="" class="thumbnail" />
+          <a href="${data[i].url}">
+          <figure><img src="${data[i].image}" alt="" class="thumbnail" />
             <span class="material-symbols-outlined play">
               play_circle
               </span>
             </figure>
           </a>
-   <h2> <header>${data[randNo].title}</header></h2>
+   <h2> <header>${data[i].title}</header></h2>
   </li>
      `;
 element.appendChild(create)
 
   }
 }
- //function calling
+setTimeout(()=>{
+cardcreate(seriesapi,series,(seriesapi.length));
+cardcreate(sidebarapi,sidebar,12);
 
-cardcreate(seriesapiData,series);
-cardcreate(movieapiData,movie);
-cardcreate(sidebarapiData,sidebar);
+},1000)
 
-}
-card();
 </script>
 <style>
   .material-symbols-outlined play {
@@ -146,6 +126,7 @@ card();
   
 }
 </style>
+
 <script src="./script/navbar.js"></script>
 <script src="./script/footer.js"></script>
 
