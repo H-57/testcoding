@@ -21,7 +21,7 @@
       <li>About</li>
       <li>Contact</li>
     </ul>
-    <img src="navbar.gif" alt="" />
+    <img src="./src/navbar.gif" alt="" />
   </nav>
 
   <div class="banner">
@@ -66,7 +66,7 @@
 
       </ul>
     </div>
-    <img src="body.gif" class="bgimg" alt="" />
+    <img src="./src/body.gif" class="bgimg" alt="" />
   </div>
 
   <aside>
@@ -96,9 +96,9 @@ let sidebarapiData;
 
 
 const card=async()=>{
- const sapi=await fetch("../api/homeapi/series.json");
- const mapi=await fetch("../api/homeapi/movie.json");
- const sideapi=await fetch("../api/homeapi/slidebar.json"); //feth data from api
+ const sapi=await fetch("../src/api/homeapi/series.json");
+ const mapi=await fetch("../src/api/homeapi/movie.json");
+ const sideapi=await fetch("../src/api/homeapi/slidebar.json"); //feth data from api
 
  
     seriesapiData=await sapi.json()//store data into a variable
@@ -142,8 +142,8 @@ element.appendChild(create)
 }
  //function calling
 
-cardcreate(seriesapiData,movie);
-cardcreate(movieapiData,series);
+cardcreate(seriesapiData,series);
+cardcreate(movieapiData,movie);
 cardcreate(sidebarapiData,sidebar);
 
 }
