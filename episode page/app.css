@@ -49,7 +49,7 @@ figure{
 	height: 70%;
 }
 
-.thumbnail:hover{
+li:hover .thumbnail{
     /* color: aquamarine; */
     width: 90%;
     transform: scale(1.5);

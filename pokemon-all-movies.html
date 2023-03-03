@@ -21,7 +21,7 @@
       <li>About</li>
       <li>Contact</li>
     </ul>
-    <img src="navbar.gif" alt="" />
+    <img src="src/navbar.gif" alt="" />
   </nav>
 
   <div class="banner">
@@ -57,7 +57,7 @@
 
       </ul>
     </div>
-    <img src="body.gif" class="bgimg" alt="" />
+    <img src="src/body.gif" class="bgimg" alt="" />
   </div>
 
   <aside>
@@ -86,17 +86,21 @@ let movieapi;
 let sidebarapi;
 
 
-const sideapi= fetch("../api/homeapi/slidebar.json");
+const card=async()=>{
 
-sideapi.then((response) => response.json())
-.then((data) =>  sidebarapi=data);
+ const mapi=await fetch("../src/api/homeapi/movie.json");
+ const sideapi=await fetch("../src/api/homeapi/slidebar.json"); //feth data from api
 
+ 
+   //store data into a variable
 
- const mapi= fetch("../api/pkallmovie.json");
+  
+ 
+    movieapi= await mapi.json()
+  
+   ;
 
-  mapi.then((response) => response.json())
-  .then((data) =>  movieapi=data);
-
+ sidebarapi= await sideapi.json()
 const movie=document.getElementById('movie');
 
 const sidebar=document.getElementById('sidebar');
@@ -127,11 +131,12 @@ element.appendChild(create)
 
   }
 }
-setTimeout(()=>{
+
 cardcreate(movieapi,movie,(movieapi.length));
 cardcreate(sidebarapi,sidebar,12);
 
-},1000)
+}
+card();
 
 </script>
 <style>
