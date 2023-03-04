@@ -263,6 +263,9 @@
         height: 120%;
     
     }
+        .card{
+            justify-content: space-around;
+        }
     .banner{
         flex-wrap: wrap;
     }
