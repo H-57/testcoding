@@ -1,99 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../hide.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="../hide.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <body>
+    <nav id="nav"></nav>
 
-</head>
-
-<body>
-  <nav id="nav">
-  </nav>
-
-  <div class="banner">
-    <div class="feature">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
-        alt="" />
-      <h2>hello this is title</h2>
-    </div>
-    <div class="slide">
-      <div class="sl1">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
-          alt="" />
+    <div class="banner">
+      <div class="feature">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
+          alt=""
+        />
         <h2>hello this is title</h2>
       </div>
-      <div class="sl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
-          alt="" />
-        <h2>hello this is title</h2>
-      </div>
-      <div class="sl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
-          alt="" />
-        <h2>hello this is title</h2>
+      <div class="slide">
+        <div class="sl1">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
+            alt=""
+          />
+          <h2>hello this is title</h2>
+        </div>
+        <div class="sl">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
+            alt=""
+          />
+          <h2>hello this is title</h2>
+        </div>
+        <div class="sl">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNaLFFSdD4YhW8mqgDBSWY8nHnte6ANHQWz6Lsl37yA&s"
+            alt=""
+          />
+          <h2>hello this is title</h2>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="body">
-    <div id="seriesdiv">
-      <span class="heading largetext"> Pokemon Series</span>
-      <ul class="video" id="Series">
-
-      </ul>
-    
-     
+    <div class="body">
+      <div id="seriesdiv">
+        <span class="heading largetext"> Pokemon Series</span>
+        <ul class="video" id="Series"></ul>
+      </div>
+      <img src="../src/body.gif" class="bgimg" alt="" />
     </div>
-    <img src="../src/body.gif" class="bgimg" alt="" />
-  </div>
 
-  <aside>
-   <span class="heading sml">  Ongoing Series</span>
-    <ul class="video" id="sidebar">
+    <aside>
+      <span class="heading sml"> Ongoing Series</span>
+      <ul class="video" id="sidebar"></ul>
+    </aside>
 
-    </ul>
-  </aside>
+    <footer id="footer"></footer>
+    <script>
+      let sidebarapi;
+      let seriesapi;
 
+      const sapi = fetch("../src/api/pokemon/pkmnseries.json");
 
-  <footer id="footer">
-  </footer>
-<script>
+      sapi
+        .then((response) => response.json())
+        .then((data) => (seriesapi = data));
 
+      const sideapi = fetch("../src/api/homeapi/slidebar.json");
 
+      sideapi
+        .then((response) => response.json())
+        .then((data) => (sidebarapi = data));
 
-let sidebarapi;
-let seriesapi;
+      const series = document.getElementById("Series");
+      const sidebar = document.getElementById("sidebar");
+      let size;
+      const cardcreate = (data, element, size) => {
+        for (let i = 0; i < size; i++) {
+          let create = document.createElement("li");
+          if (data[i].url == "undefined") {
+            data[i].url = "";
+          }
 
-
-
-const sapi= fetch("../src/api/pokemon/pkmnseries.json");
-
-  sapi.then((response) => response.json())
-  .then((data) =>  seriesapi=data);
-
-  const sideapi= fetch("../src/api/homeapi/slidebar.json");
-
-sideapi.then((response) => response.json())
-.then((data) =>  sidebarapi=data);
-
-const series=document.getElementById('Series');
-const sidebar=document.getElementById('sidebar');
-let size;
-const cardcreate=(data,element,size)=>{
-
-  for(let i=0;i<size;i++){
-  let create = document.createElement("li");
-  if(data[i].url=="undefined"){
-    data[i].url="";
-  }
-
-create.innerHTML = `
+          create.innerHTML = `
          
 
         <li class="card">
@@ -107,30 +106,21 @@ create.innerHTML = `
    <h2> <header>${data[i].title}</header></h2>
   </li>
      `;
-element.appendChild(create)
+          element.appendChild(create);
+        }
+      };
+      setTimeout(() => {
+        cardcreate(seriesapi, series, seriesapi.length);
+        cardcreate(sidebarapi, sidebar, 12);
+      }, 1000);
+    </script>
+    <style>
+      .material-symbols-outlined play {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+      }
+    </style>
 
-  }
-}
-setTimeout(()=>{
-cardcreate(seriesapi,series,(seriesapi.length));
-cardcreate(sidebarapi,sidebar,12);
-
-},1000)
-
-</script>
-<style>
-  .material-symbols-outlined play {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-  
-}
-</style>
-
-<script src="../script/navbar.js"></script>
-<script src="../script/footer.js"></script>
-</body>
-
+    <script src="../script/navbar.js"></script>
+    <script src="../script/footer.js"></script>
+  </body>
 </html>

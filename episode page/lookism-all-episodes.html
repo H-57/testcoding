@@ -55,7 +55,7 @@
     
     let apidata;
     const start=async()=>{
-    const api=await fetch("../src/api/pokemon/pkmns1.json");
+    const api=await fetch("../src/api/lookism/s1.json");
     
     apidata=await api.json();
     
@@ -88,7 +88,7 @@
     
 <figure><img src="${apidata[i].image}" alt="" class="thumbnail" /></figure>
 
-<span class="epnumber">${apidata[i].epno}</span>
+<span class="epnumber">Episode${i}</span>
 <header>${apidata[i].title}</header>
 <span class="material-symbols-outlined play">
  play_circle

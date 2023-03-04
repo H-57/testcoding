@@ -1,102 +1,146 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     list-style-type: none;
     color: aliceblue;
 }
-body{
+
+body {
     background: #120922;
     list-style-type: none;
 }
+
 /* for ul list store all video cards */
-.video{
+.video {
 
     display: flex;
     flex-wrap: wrap;
     /* margin: auto; */
-    justify-content: space-around;
-row-gap: 20px;
-column-gap: 40px;
+    /* justify-content: space-around; */
+    row-gap: 20px;
+    column-gap: 40px;
 }
+
 /* for define size of video cards */
-.card{
+.card {
     width: 10rem;
     height: 12rem;
     color: aliceblue;
     /* border: solid 1px red; */
     /* margin: 5px; */
     background: #1b0f30;
-border-radius: 9px;
-cursor:pointer;
+    border-radius: 9px;
+    cursor: pointer;
 }
+
 /* for define image in card */
-.thumbnail{
-    position:relative;
+.thumbnail {
+    position: relative;
     width: 90%;
- 
+
     top: 2%;
     left: 5%;
-        border-radius: 10px;
-        transform: scale(1);
-        transition: all .4s ease-in-out;
-   height: 100%;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: all .4s ease-in-out;
+    height: 100%;
 
-   
+
 }
+
 /*  for stop over floew of image from card */
-figure{
-    overflow: hidden; 
-	height: 70%;
+figure {
+    overflow: hidden;
+    height: 70%;
 }
 
-li:hover .thumbnail{
+li:hover .thumbnail {
     /* color: aquamarine; */
     width: 90%;
     transform: scale(1.5);
-    
+
 }
+
 /* for episode number shows */
-.epnumber{
-  
+.epnumber {
+
     font-size: 21px;
     text-shadow: 0px 2px 3px aqua;
     color: aqua;
 }
+
 /* for title of video shows */
-.card header{
-/* color: tomato; */
-color: white;
-text-shadow:1px 1px 3px tomato ;
-margin-left: 5px;
+.card header {
+    /* color: tomato; */
+    color: white;
+    text-shadow: 1px 1px 3px tomato;
+    margin-left: 5px;
 }
-.play{
-display:none;
+
+.play {
+    display: none;
     position: relative;
 
 
-top: -58%;
-left: 32%;
-font-size: 50px!important;
+    top: -58%;
+    left: 32%;
+    font-size: 50px !important;
 }
-.card:hover~.play{display: block!important;}    
+
+.conbtn {
+    margin: auto;
+    width: 18rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    
+    width: 7rem;
+    height: 3rem;
+    background: linear-gradient(to bottom right, #380036, #0CBABA, #7F5A83);
+    border-radius: 25px;
+    color: #e60000;
+    font-size: 2rem;
+    text-shadow: 0px 0px 10px red, 0px 0px 20px red, 0px 0px 30px red;
+    border: none;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.card:hover~.play {
+    display: block !important;
+}
+
 @media only screen and (max-width: 600px) {
 
 
-.card{
-    width: 20rem;
-    height: 24rem;
-}
-.play{
-    left: 40%;
-}
-.epnumber{
-    font-size: 3rem;
-}
-header{
-    font-size: 2rem;
-}
+    .card {
+        width: 20rem;
+        height: 24rem;
+    }
+
+    .play {
+        left: 40%;
+    }
+
+    .epnumber {
+        font-size: 3rem;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
 
 }
-.check{
+
+.check {
+    
     opacity: 0.3;
+}
+#episodeno{
+    font-size: 2rem;
+    margin: auto;
+display: block;
+width: fit-content;
 }

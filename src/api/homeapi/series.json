@@ -1,104 +1,132 @@
 [
-    {
-      "title": "Indigo League",
-      "image": "https://i.imgur.com/nYtlBmc.webp"
-    },
-    {
-      "title": "Adventures in the Orange Islands",
-      "image": "https://i.imgur.com/gNbHexu.webp"
-    },
-    {
-      "title": "The Johto Journeys",
-      "image": "https://i.imgur.com/IDJo036.webp"
-    },
-    {
-      "title": "Johto League Champions",
-      "image": "https://i.imgur.com/qTuQCYE.webp"
-    },
-    {
-      "title": "Master Quest",
-      "image": "https://i.imgur.com/XTNwq0b.webp"
-    },
-    { "title": "Advanced", "image": "https://i.imgur.com/KJ0FqsW.webp" },
-    {
-      "title": "Advanced Challenge",
-      "image": "https://i.imgur.com/xvi266D.webp"
-    },
-    {
-      "title": "Advanced Battle",
-      "image": "https://i.imgur.com/OAmWTiJ.webp"
-    },
-    {
-      "title": "Battle Frontier",
-      "image": "https://i.imgur.com/qWQFG7C.webp"
-    },
-    {
-      "title": "DP Battle Dimension",
-      "image": "https://i.imgur.com/HFejYpP.webp"
-    },
-    {
-      "title": "DP Galactic Battles",
-      "image": "https://i.imgur.com/jVq2DpN.webp"
-    },
-    {
-      "title": "DP Sinnoh League Victors",
-      "image": "https://i.imgur.com/mbjUONw.webp"
-    },
-    {
-      "title": "Black & White",
-      "image": "https://i.imgur.com/j3Jyx7Y.webp"
-    },
-    {
-      "title": "XY",
-      "image": "https://i.imgur.com/ClZqLiD.webp"
-    },
-    {
-      "title": "XY Kalos Quest",
-      "image": "https://i.imgur.com/YDp36ho.webp"
-    },
-    {
-      "title": "XYZ",
-      "image": "https://i.imgur.com/ReuVwhJ.webp"
-    },
-    {
-      "title": "Sun & Moon",
-      "image": "https://i.imgur.com/WAgKGr4.webp"
-    },
-    {
-      "title": "Sun & Moon Ultra Adventures",
-      "image": "https://i.imgur.com/ur0zerf.webp"
-    },
-    {
-      "title": "Sun & Moon  Ultra Legends",
-      "image": "https://i.imgur.com/UFciQUD.webp"
-    },
-    {
-      "title": "Pokemon Journeys: The Series",
-      "image": "https://i.imgur.com/gaNAWoH.webp"
-    },
-    {
-      "title": "BW Rival Destinies",
-      "image": "https://i.imgur.com/2dNgB8P.webp"
-    },
-    {
-      "title": "Diamond and Pearl",
-      "image": "https://i.imgur.com/OPDyhTO.webp"
-    },
-    {
-      "title": "Master Journeys",
-      "image": "https://i.imgur.com/7OfIucX.webp"
-    },
-    {
-      "title": "BW Adventures in Unova",
-      "image": "https://i.imgur.com/IPbBmyv.webp"
-    },
-    {
-      "title": "Season 25 (Sub)",
-      "image": "https://i.imgur.com/QL0kyWF.webp"
-    },
-    {
-      "title": "Ultimate Journeys",
-      "image": "https://i.imgur.com/4mMhyaa.webp"
-    }
-  ]
-  
+  {
+    "title": "Indigo League",
+    "image": "https://i.imgur.com/nYtlBmc.webp",
+    "url": "../episode page\\pokemon-season1-all-episodes.html"
+  },
+  {
+    "title": "Adventures in the Orange Islands",
+    "image": "https://i.imgur.com/gNbHexu.webp",
+    "url": "../episode page\\pokemon-season2-all-episodes.html"
+  },
+  {
+    "title": "The Johto Journeys",
+    "image": "https://i.imgur.com/IDJo036.webp",
+    "url": "../episode page\\pokemon-season3-all-episodes.html"
+  },
+  {
+    "title": "Johto League Champions",
+    "image": "https://i.imgur.com/qTuQCYE.webp",
+    "url": "../episode page\\pokemon-season4-all-episodes.html"
+  },
+  {
+    "title": "Master Quest",
+    "image": "https://i.imgur.com/XTNwq0b.webp",
+    "url": "../episode page\\pokemon-season5-all-episodes.html"
+  },
+  {
+    "title": "Advanced",
+    "image": "https://i.imgur.com/KJ0FqsW.webp",
+    "url": "../episode page\\pokemon-season6-all-episodes.html"
+  },
+  {
+    "title": "Advanced Challenge",
+    "image": "https://i.imgur.com/xvi266D.webp",
+    "url": "../episode page\\pokemon-season7-all-episodes.html"
+  },
+  {
+    "title": "Advanced Battle",
+    "image": "https://i.imgur.com/OAmWTiJ.webp",
+    "url": "../episode page\\pokemon-season8-all-episodes.html"
+  },
+  {
+    "title": "Battle Frontier",
+    "image": "https://i.imgur.com/qWQFG7C.webp",
+    "url": "../episode page\\pokemon-season9-all-episodes.html"
+  },
+  {
+    "title": "DP Battle Dimension",
+    "image": "https://i.imgur.com/HFejYpP.webp",
+    "url": "../episode page\\pokemon-season10-all-episodes.html"
+  },
+  {
+    "title": "DP Galactic Battles",
+    "image": "https://i.imgur.com/jVq2DpN.webp",
+    "url": "../episode page\\pokemon-season11-all-episodes.html"
+  },
+  {
+    "title": "DP Sinnoh League Victors",
+    "image": "https://i.imgur.com/mbjUONw.webp",
+    "url": "../episode page\\pokemon-season12-all-episodes.html"
+  },
+  {
+    "title": "Black & White",
+    "image": "https://i.imgur.com/j3Jyx7Y.webp",
+    "url": "../episode page\\pokemon-season13-all-episodes.html"
+  },
+  {
+    "title": "XY",
+    "image": "https://i.imgur.com/ClZqLiD.webp",
+    "url": "../episode page\\pokemon-season14-all-episodes.html"
+  },
+  {
+    "title": "XY Kalos Quest",
+    "image": "https://i.imgur.com/YDp36ho.webp",
+    "url": "../episode page\\pokemon-season15-all-episodes.html"
+  },
+  {
+    "title": "XYZ",
+    "image": "https://i.imgur.com/ReuVwhJ.webp",
+    "url": "../episode page\\pokemon-season16-all-episodes.html"
+  },
+  {
+    "title": "Sun & Moon",
+    "image": "https://i.imgur.com/WAgKGr4.webp",
+    "url": "../episode page\\pokemon-season17-all-episodes.html"
+  },
+  {
+    "title": "Sun & Moon Ultra Adventures",
+    "image": "https://i.imgur.com/ur0zerf.webp",
+    "url": "../episode page\\pokemon-season18-all-episodes.html"
+  },
+  {
+    "title": "Sun & Moon  Ultra Legends",
+    "image": "https://i.imgur.com/UFciQUD.webp",
+    "url": "../episode page\\pokemon-season19-all-episodes.html"
+  },
+  {
+    "title": "Pokemon Journeys: The Series",
+    "image": "https://i.imgur.com/gaNAWoH.webp",
+    "url": "../episode page\\pokemon-season20-all-episodes.html"
+  },
+  {
+    "title": "BW Rival Destinies",
+    "image": "https://i.imgur.com/2dNgB8P.webp",
+    "url": "../episode page\\pokemon-season21-all-episodes.html"
+  },
+  {
+    "title": "Diamond and Pearl",
+    "image": "https://i.imgur.com/OPDyhTO.webp",
+    "url": "../episode page\\pokemon-season22-all-episodes.html"
+  },
+  {
+    "title": "Master Journeys",
+    "image": "https://i.imgur.com/7OfIucX.webp",
+    "url": "../episode page\\pokemon-season23-all-episodes.html"
+  },
+  {
+    "title": "BW Adventures in Unova",
+    "image": "https://i.imgur.com/IPbBmyv.webp",
+    "url": "../episode page\\pokemon-season24-all-episodes.html"
+  },
+  {
+    "title": "Season 25 (Sub)",
+    "image": "https://i.imgur.com/QL0kyWF.webp",
+    "url": "../episode page\\pokemon-season25-all-episodes.html"
+  },
+  {
+    "title": "Ultimate Journeys",
+    "image": "https://i.imgur.com/4mMhyaa.webp",
+    "url": "../episode page\\pokemon-season26-all-episodes.html"
+  }
+]
