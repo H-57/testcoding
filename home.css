@@ -206,7 +206,7 @@
     }
     
     
-    .thumbnail:hover {
+   li:hover .thumbnail {
     /* color: aquamarine; */
     width: 90%;
     transform: scale(1.5);
@@ -258,6 +258,7 @@
    a{
     text-decoration: none;
    }
+
     @media only screen and (max-width: 400px){
     .bgimg{
         height: 120%;
